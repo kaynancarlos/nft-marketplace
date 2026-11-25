@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T15:18:50.475Z",
+  "generatedAt": "2026-11-25T22:44:11.734Z",
   "environment": {
     "lighthouse": "12.6.1",
     "chrome": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
@@ -15,48 +15,48 @@
     {
       "profile": "mobile",
       "url": "/",
-      "runs": 3,
-      "performance": 93,
+      "runs": 6,
+      "performance": 94,
       "accessibility": 96,
       "best-practices": 100,
       "seo": 100,
-      "lcpMs": 2977,
+      "lcpMs": 2890,
       "cls": 0,
-      "tbtMs": 72
+      "tbtMs": 55
     },
     {
       "profile": "mobile",
       "url": "/nft/emerald-ape-042",
-      "runs": 3,
+      "runs": 6,
       "performance": 95,
       "accessibility": 95,
       "best-practices": 100,
       "seo": 100,
-      "lcpMs": 2780,
+      "lcpMs": 2804,
       "cls": 0,
       "tbtMs": 33
     },
     {
       "profile": "desktop",
       "url": "/",
-      "runs": 3,
+      "runs": 6,
       "performance": 100,
       "accessibility": 96,
       "best-practices": 100,
       "seo": 100,
-      "lcpMs": 677,
+      "lcpMs": 685,
       "cls": 0.003,
       "tbtMs": 0
     },
     {
       "profile": "desktop",
       "url": "/nft/emerald-ape-042",
-      "runs": 3,
-      "performance": 99,
+      "runs": 6,
+      "performance": 100,
       "accessibility": 97,
       "best-practices": 100,
       "seo": 100,
-      "lcpMs": 838,
+      "lcpMs": 770,
       "cls": 0.001,
       "tbtMs": 0
     }

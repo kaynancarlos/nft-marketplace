@@ -2,10 +2,10 @@
   {
     "url": "http://localhost:4173/",
     "isRepresentativeRun": false,
-    "htmlPath": "C:\\Users\\Win11\\Desktop\\kurio-nft-marketplace-revisado\\nft-marketplace\\reports\\lighthouse\\mobile\\-2026_11_25_15_15_32-report.html",
-    "jsonPath": "C:\\Users\\Win11\\Desktop\\kurio-nft-marketplace-revisado\\nft-marketplace\\reports\\lighthouse\\mobile\\-2026_11_25_15_15_32-report.json",
+    "htmlPath": "C:\\Users\\Win11\\Desktop\\kurio-nft-marketplace-revisado\\nft-marketplace\\reports\\lighthouse\\mobile\\-2026_11_25_22_40_59-report.html",
+    "jsonPath": "C:\\Users\\Win11\\Desktop\\kurio-nft-marketplace-revisado\\nft-marketplace\\reports\\lighthouse\\mobile\\-2026_11_25_22_40_59-report.json",
     "summary": {
-      "performance": 0.93,
+      "performance": 0.94,
       "accessibility": 0.96,
       "best-practices": 1,
       "seo": 1
@@ -14,8 +14,8 @@
   {
     "url": "http://localhost:4173/",
     "isRepresentativeRun": false,
-    "htmlPath": "C:\\Users\\Win11\\Desktop\\kurio-nft-marketplace-revisado\\nft-marketplace\\reports\\lighthouse\\mobile\\-2026_11_25_15_16_05-report.html",
-    "jsonPath": "C:\\Users\\Win11\\Desktop\\kurio-nft-marketplace-revisado\\nft-marketplace\\reports\\lighthouse\\mobile\\-2026_11_25_15_16_05-report.json",
+    "htmlPath": "C:\\Users\\Win11\\Desktop\\kurio-nft-marketplace-revisado\\nft-marketplace\\reports\\lighthouse\\mobile\\-2026_11_25_22_41_16-report.html",
+    "jsonPath": "C:\\Users\\Win11\\Desktop\\kurio-nft-marketplace-revisado\\nft-marketplace\\reports\\lighthouse\\mobile\\-2026_11_25_22_41_16-report.json",
     "summary": {
       "performance": 0.94,
       "accessibility": 0.96,
@@ -26,8 +26,8 @@
   {
     "url": "http://localhost:4173/nft/emerald-ape-042",
     "isRepresentativeRun": false,
-    "htmlPath": "C:\\Users\\Win11\\Desktop\\kurio-nft-marketplace-revisado\\nft-marketplace\\reports\\lighthouse\\mobile\\nft_emerald_ape_042-2026_11_25_15_16_21-report.html",
-    "jsonPath": "C:\\Users\\Win11\\Desktop\\kurio-nft-marketplace-revisado\\nft-marketplace\\reports\\lighthouse\\mobile\\nft_emerald_ape_042-2026_11_25_15_16_21-report.json",
+    "htmlPath": "C:\\Users\\Win11\\Desktop\\kurio-nft-marketplace-revisado\\nft-marketplace\\reports\\lighthouse\\mobile\\nft_emerald_ape_042-2026_11_25_22_41_47-report.html",
+    "jsonPath": "C:\\Users\\Win11\\Desktop\\kurio-nft-marketplace-revisado\\nft-marketplace\\reports\\lighthouse\\mobile\\nft_emerald_ape_042-2026_11_25_22_41_47-report.json",
     "summary": {
       "performance": 0.95,
       "accessibility": 0.95,
@@ -38,8 +38,8 @@
   {
     "url": "http://localhost:4173/nft/emerald-ape-042",
     "isRepresentativeRun": false,
-    "htmlPath": "C:\\Users\\Win11\\Desktop\\kurio-nft-marketplace-revisado\\nft-marketplace\\reports\\lighthouse\\mobile\\nft_emerald_ape_042-2026_11_25_15_16_36-report.html",
-    "jsonPath": "C:\\Users\\Win11\\Desktop\\kurio-nft-marketplace-revisado\\nft-marketplace\\reports\\lighthouse\\mobile\\nft_emerald_ape_042-2026_11_25_15_16_36-report.json",
+    "htmlPath": "C:\\Users\\Win11\\Desktop\\kurio-nft-marketplace-revisado\\nft-marketplace\\reports\\lighthouse\\mobile\\nft_emerald_ape_042-2026_11_25_22_42_02-report.html",
+    "jsonPath": "C:\\Users\\Win11\\Desktop\\kurio-nft-marketplace-revisado\\nft-marketplace\\reports\\lighthouse\\mobile\\nft_emerald_ape_042-2026_11_25_22_42_02-report.json",
     "summary": {
       "performance": 0.94,
       "accessibility": 0.95,
@@ -50,10 +50,10 @@
   {
     "url": "http://localhost:4173/",
     "isRepresentativeRun": true,
-    "htmlPath": "C:\\Users\\Win11\\Desktop\\kurio-nft-marketplace-revisado\\nft-marketplace\\reports\\lighthouse\\mobile\\-2026_11_25_15_15_49-report.html",
-    "jsonPath": "C:\\Users\\Win11\\Desktop\\kurio-nft-marketplace-revisado\\nft-marketplace\\reports\\lighthouse\\mobile\\-2026_11_25_15_15_49-report.json",
+    "htmlPath": "C:\\Users\\Win11\\Desktop\\kurio-nft-marketplace-revisado\\nft-marketplace\\reports\\lighthouse\\mobile\\-2026_11_25_22_41_32-report.html",
+    "jsonPath": "C:\\Users\\Win11\\Desktop\\kurio-nft-marketplace-revisado\\nft-marketplace\\reports\\lighthouse\\mobile\\-2026_11_25_22_41_32-report.json",
     "summary": {
-      "performance": 0.93,
+      "performance": 0.94,
       "accessibility": 0.96,
       "best-practices": 1,
       "seo": 1
@@ -62,10 +62,10 @@
   {
     "url": "http://localhost:4173/nft/emerald-ape-042",
     "isRepresentativeRun": true,
-    "htmlPath": "C:\\Users\\Win11\\Desktop\\kurio-nft-marketplace-revisado\\nft-marketplace\\reports\\lighthouse\\mobile\\nft_emerald_ape_042-2026_11_25_15_16_50-report.html",
-    "jsonPath": "C:\\Users\\Win11\\Desktop\\kurio-nft-marketplace-revisado\\nft-marketplace\\reports\\lighthouse\\mobile\\nft_emerald_ape_042-2026_11_25_15_16_50-report.json",
+    "htmlPath": "C:\\Users\\Win11\\Desktop\\kurio-nft-marketplace-revisado\\nft-marketplace\\reports\\lighthouse\\mobile\\nft_emerald_ape_042-2026_11_25_22_42_17-report.html",
+    "jsonPath": "C:\\Users\\Win11\\Desktop\\kurio-nft-marketplace-revisado\\nft-marketplace\\reports\\lighthouse\\mobile\\nft_emerald_ape_042-2026_11_25_22_42_17-report.json",
     "summary": {
-      "performance": 0.95,
+      "performance": 0.94,
       "accessibility": 0.95,
       "best-practices": 1,
       "seo": 1

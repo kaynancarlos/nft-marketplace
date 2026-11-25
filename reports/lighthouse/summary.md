@@ -1,13 +1,13 @@
 # Lighthouse — mediana de 3 execuções
 
-Gerado em 2026-11-25T15:18:50.475Z
+Gerado em 2026-11-25T22:44:11.734Z
 
 | Perfil | Página | Perf. | A11y | Best Pr. | SEO | LCP (ms) | CLS | TBT (ms) |
 |---|---|---|---|---|---|---|---|---|
-| mobile | / | 93 | 96 | 100 | 100 | 2977 | 0 | 72 |
-| mobile | /nft/emerald-ape-042 | 95 | 95 | 100 | 100 | 2780 | 0 | 33 |
-| desktop | / | 100 | 96 | 100 | 100 | 677 | 0.003 | 0 |
-| desktop | /nft/emerald-ape-042 | 99 | 97 | 100 | 100 | 838 | 0.001 | 0 |
+| mobile | / | 94 | 96 | 100 | 100 | 2890 | 0 | 55 |
+| mobile | /nft/emerald-ape-042 | 95 | 95 | 100 | 100 | 2804 | 0 | 33 |
+| desktop | / | 100 | 96 | 100 | 100 | 685 | 0.003 | 0 |
+| desktop | /nft/emerald-ape-042 | 100 | 97 | 100 | 100 | 770 | 0.001 | 0 |
 
 ## Ambiente
 

@@ -20,10 +20,15 @@ function knownNftVersion(queryClient: QueryClient, nftId: string): number {
 }
 
 export function applyNftUpdated(queryClient: QueryClient, event: NftUpdatedEvent) {
-  const { data, version } = event
-  // O cache REST já tem uma versão igual ou mais nova: evento obsoleto.
-  if (knownNftVersion(queryClient, data.nftId) >= version) return
+  // Se o cache REST já tem uma versão igual ou mais nova (uma consulta chegou
+  // depois da mudança), não há o que corrigir no detalhe/listas. O carrinho e a
+  // cotação são revalidados mesmo assim: eles podem ter sido lidos antes.
+  if (knownNftVersion(queryClient, event.data.nftId) < event.version) patchNftCaches(queryClient, event)
+  revalidateCart(queryClient, event)
+}
 
+function patchNftCaches(queryClient: QueryClient, event: NftUpdatedEvent) {
+  const { data, version } = event
   queryClient.setQueryData<NftDetail>(qk.nfts.detail(data.nftId), (old) => {
     if (!old || old.version >= version) return old
     return {
@@ -59,7 +64,10 @@ export function applyNftUpdated(queryClient: QueryClient, event: NftUpdatedEvent
       ),
     }
   })
+}
 
+function revalidateCart(queryClient: QueryClient, event: NftUpdatedEvent) {
+  const { data } = event
   // Carrinho: qualquer carrinho em cache que contenha o NFT.
   const carts = queryClient.getQueriesData<Cart>({ queryKey: qk.cart.all })
   const affected = carts
