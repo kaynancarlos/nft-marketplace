@@ -1,0 +1,12 @@
+node_modules
+dist
+.env
+.env.local
+*.log
+.DS_Store
+.vercel
+.lighthouseci
+test-results
+blob-report
+playwright/.cache
+node_modules/.tmp

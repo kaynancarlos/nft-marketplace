@@ -1,0 +1,64 @@
+{
+  "generatedAt": "2026-11-25T15:18:50.475Z",
+  "environment": {
+    "lighthouse": "12.6.1",
+    "chrome": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+    "node": "v24.21.0",
+    "npm": "11.19.0",
+    "os": "Windows_NT 10.0.26300 (x64)",
+    "cpu": "13th Gen Intel(R) Core(TM) i7-13620H",
+    "memoryGb": 8,
+    "build": "npm run build:demo (vite build, mocks ativos, cenário default)",
+    "server": "vite preview (porta 4173)"
+  },
+  "results": [
+    {
+      "profile": "mobile",
+      "url": "/",
+      "runs": 3,
+      "performance": 93,
+      "accessibility": 96,
+      "best-practices": 100,
+      "seo": 100,
+      "lcpMs": 2977,
+      "cls": 0,
+      "tbtMs": 72
+    },
+    {
+      "profile": "mobile",
+      "url": "/nft/emerald-ape-042",
+      "runs": 3,
+      "performance": 95,
+      "accessibility": 95,
+      "best-practices": 100,
+      "seo": 100,
+      "lcpMs": 2780,
+      "cls": 0,
+      "tbtMs": 33
+    },
+    {
+      "profile": "desktop",
+      "url": "/",
+      "runs": 3,
+      "performance": 100,
+      "accessibility": 96,
+      "best-practices": 100,
+      "seo": 100,
+      "lcpMs": 677,
+      "cls": 0.003,
+      "tbtMs": 0
+    },
+    {
+      "profile": "desktop",
+      "url": "/nft/emerald-ape-042",
+      "runs": 3,
+      "performance": 99,
+      "accessibility": 97,
+      "best-practices": 100,
+      "seo": 100,
+      "lcpMs": 838,
+      "cls": 0.001,
+      "tbtMs": 0
+    }
+  ]
+}

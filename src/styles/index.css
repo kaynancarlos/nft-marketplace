@@ -1,0 +1,99 @@
+@import 'tailwindcss';
+
+/*
+ * Tokens extraídos do Figma (Kurio). Os nomes seguem a convenção do shadcn/ui
+ * (background, foreground, primary...) para que os componentes gerados pelo CLI
+ * herdem a identidade visual sem ajustes.
+ */
+@theme {
+  --font-sans: 'Roboto Mono Variable', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-mono: 'Roboto Mono Variable', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-background: #120b09;
+  --color-foreground: #f4ede6;
+  --color-surface: #1e1512;
+  --color-surface-2: #261a16;
+  --color-elevated: #2e211b;
+  --color-line: #3d2c24;
+  --color-muted: #d3b190;
+  --color-subtle: #a78d79;
+  --color-primary: #d38b4f;
+  --color-primary-hover: #e09a5e;
+  --color-primary-foreground: #1a0f0a;
+  --color-price: #e8a064;
+  --color-band: #3a2311;
+  --color-danger: #ff8a7a;
+  --color-success: #7fd8a4;
+  --color-ring: #f0b27a;
+
+  --radius-card: 14px;
+
+  --animate-shimmer: shimmer 1.6s linear infinite;
+
+  @keyframes shimmer {
+    from {
+      background-position: -200% 0;
+    }
+    to {
+      background-position: 200% 0;
+    }
+  }
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    min-height: 100dvh;
+  }
+
+  /* Foco visível consistente para navegação por teclado */
+  :focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: var(--color-primary);
+    color: var(--color-primary-foreground);
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+@layer utilities {
+  .skeleton {
+    background: linear-gradient(90deg, #241914 25%, #3a2a22 37%, #241914 63%);
+    background-size: 400% 100%;
+    animation: var(--animate-shimmer);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .skeleton {
+    animation: none;
+    background: #2a1d17;
+  }
+}

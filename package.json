@@ -1,0 +1,72 @@
+{
+  "name": "kurio-nft-marketplace",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=20.19"
+  },
+  "scripts": {
+    "dev": "vite",
+    "dev:mocks": "cross-env VITE_ENABLE_MOCKS=true vite",
+    "build": "vite build",
+    "build:demo": "cross-env VITE_ENABLE_MOCKS=true npm run build",
+    "preview": "vite preview --port 4173 --strictPort",
+    "typecheck": "tsc -b",
+    "lint": "eslint .",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:update": "playwright test --update-snapshots",
+    "test:e2e:report": "playwright show-report reports/playwright",
+    "lighthouse": "npm run build:demo && npm run lighthouse:mobile && npm run lighthouse:desktop && node scripts/lighthouse-summary.mjs",
+    "lighthouse:mobile": "lhci collect --config=lighthouse/lighthouserc.mobile.cjs && lhci upload --config=lighthouse/lighthouserc.mobile.cjs",
+    "lighthouse:desktop": "lhci collect --config=lighthouse/lighthouserc.desktop.cjs && lhci upload --config=lighthouse/lighthouserc.desktop.cjs",
+    "check": "npm run typecheck && npm run lint"
+  },
+  "dependencies": {
+    "@fontsource-variable/roboto-mono": "^5.2.6",
+    "@hookform/resolvers": "^5.1.1",
+    "@radix-ui/react-dialog": "^1.1.14",
+    "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@tanstack/react-query": "^5.80.7",
+    "@tanstack/react-router": "^1.121.0",
+    "axios": "^1.10.0",
+    "big.js": "^7.0.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.515.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-hook-form": "^7.58.0",
+    "socket.io-client": "^4.8.1",
+    "sonner": "^2.0.5",
+    "tailwind-merge": "^3.3.1",
+    "zod": "^3.25.67"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.29.0",
+    "@lhci/cli": "^0.15.0",
+    "@playwright/test": "^1.53.0",
+    "@tailwindcss/vite": "^4.1.10",
+    "@types/big.js": "^6.2.2",
+    "@types/node": "^22.15.32",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.5.2",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.29.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "globals": "^16.2.0",
+    "msw": "^2.10.2",
+    "tailwindcss": "^4.1.10",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.34.1",
+    "vite": "^6.3.5"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
+  }
+}
