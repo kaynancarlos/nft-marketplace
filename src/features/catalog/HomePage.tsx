@@ -114,7 +114,7 @@ export function HomePage() {
               )}
 
               {isPending ? (
-                <ul className="grid grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-3 md:gap-x-7 md:gap-y-12" aria-label="Carregando NFTs">
+                <ul className="grid grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-3 md:gap-x-7 md:gap-y-12" aria-label="Carregando NFTs">
                   {Array.from({ length: PAGE_SIZE }).map((_, i) => (
                     <li key={i}>
                       <NftCardSkeleton />
@@ -148,7 +148,7 @@ export function HomePage() {
                 <ul
                   className={cn(
                     // Mobile (Figma): segunda coluna levemente deslocada para baixo.
-                    'grid grid-cols-2 gap-x-4 gap-y-8 transition-opacity max-md:[&>li:nth-child(even)]:mt-6 md:grid-cols-3 md:gap-x-7 md:gap-y-12 lg:gap-x-8',
+                    'grid grid-cols-2 gap-x-4 gap-y-8 transition-opacity max-md:[&>li:nth-child(even)]:mt-6 md:grid-cols-2 lg:grid-cols-3 md:gap-x-7 md:gap-y-12 lg:gap-x-8',
                     updating && 'opacity-60',
                   )}
                   data-testid="catalog-grid"

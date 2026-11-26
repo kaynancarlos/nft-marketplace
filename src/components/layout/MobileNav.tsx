@@ -35,10 +35,10 @@ export function MobileNav() {
   return (
     <nav aria-label="Navegação inferior" className="fixed inset-x-0 bottom-0 z-30 drop-shadow-[0_-6px_16px_rgba(0,0,0,0.45)] md:hidden">
       <div className="relative h-16">
-        {/* Fundo: lateral esquerda + recorte central + lateral direita. */}
+        {/* Fundo: lateral esquerda + recorte central + lateral direita (sobrepostos 1 px para não aparecer emenda). */}
         <div aria-hidden className="absolute inset-0 flex">
           <div className="flex-1 rounded-tl-[28px] bg-surface" />
-          <svg viewBox="0 0 140 64" className="h-16 w-[140px] shrink-0 fill-surface" preserveAspectRatio="none">
+          <svg viewBox="0 0 140 64" className="-mx-px h-16 w-[142px] shrink-0 fill-surface" preserveAspectRatio="none">
             <path d="M0 0H20C34 0 38 6 43 16C50 30 58 38 70 38C82 38 90 30 97 16C102 6 106 0 120 0H140V64H0Z" />
           </svg>
           <div className="flex-1 rounded-tr-[28px] bg-surface" />

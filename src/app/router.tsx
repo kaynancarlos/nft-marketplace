@@ -163,6 +163,8 @@ export function createAppRouter(queryClient: QueryClient) {
     defaultPreload: 'intent',
     defaultPreloadStaleTime: 0,
     defaultPendingComponent: PageFallback,
+    // Erros de uma página aparecem dentro do layout (cabeçalho e navegação continuam visíveis).
+    defaultErrorComponent: RouteError,
     scrollRestoration: true,
   })
 }

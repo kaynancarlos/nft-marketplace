@@ -22,7 +22,7 @@ export function Hero() {
   return (
     <section aria-labelledby="hero-title" className="relative mt-4 md:mt-6">
       <div className="relative grid items-center gap-4 overflow-hidden rounded-[var(--radius-card)] bg-gradient-to-br from-[#3a2418] to-[#1d130f] p-4 md:grid-cols-[1fr_minmax(0,300px)] md:gap-10 md:rounded-none md:bg-none md:p-0 md:pl-7 lg:grid-cols-[1fr_450px] lg:pl-10">
-        <div className="relative z-10 max-w-[62%] md:max-w-none">
+        <div className="relative z-10 max-w-[56%] md:max-w-none">
           <p className="mb-2 text-[11px] font-semibold md:mb-5 md:text-xs lg:text-[13px]">Bem-vindo à Kurio</p>
           <h1 id="hero-title" className="text-lg font-bold uppercase leading-tight md:text-[34px] md:leading-[1.5] lg:text-[44px] lg:leading-[1.58]">
             <span className="md:hidden">Seja dono da cultura digital</span>
