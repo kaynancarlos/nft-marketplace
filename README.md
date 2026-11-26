@@ -2,26 +2,26 @@
 
 Implementação do desafio frontend **NFT Marketplace** em React + TypeScript, com dados simulados na camada de rede (MSW) e tempo real via Socket.IO.
 
-- **Deploy:** `https://<seu-projeto>.vercel.app` _(preencha após publicar)_
+- **Deploy:** `https://kurio-nft-marketplace.vercel.app` 
 - **Arquitetura, contratos e decisões:** [`ARCHITECTURE.md`](./ARCHITECTURE.md)
 
 ## Stack
 
 | Responsabilidade | Tecnologia |
-| --- | --- |
-| Interface | React 19 |
-| Linguagem | TypeScript (strict) |
-| Build | Vite 6 |
-| Roteamento | TanStack Router (rotas em código, search params validados) |
-| Estado remoto | TanStack Query v5 |
-| Cliente HTTP | Axios (instância única com interceptors) |
-| Tempo real | socket.io-client 4 |
-| Estilo | Tailwind CSS 4 + shadcn/ui (Radix) adaptado ao Figma |
-| Formulários | react-hook-form + zod (schemas compartilhados com os mocks) |
+|      ---         |    ---     |
+|    Interface     |  React 19  | 
+| Linguagem        | TypeScript (strict) |
+| Build            | Vite 6 |
+| Roteamento       | TanStack Router (rotas em código, search params validados) |
+| Estado remoto    | TanStack Query v5 |
+| Cliente HTTP     | Axios (instância única com interceptors) |
+| Tempo real       | socket.io-client 4 |
+| Estilo           | Tailwind CSS 4 + shadcn/ui (Radix) adaptado ao Figma |
+| Formulários      | react-hook-form + zod (schemas compartilhados com os mocks) |
 | Precisão decimal | big.js (ETH sempre como string decimal) |
-| Mocking | MSW 2 (REST + WebSocket com protocolo Socket.IO) |
+| Mocking          | MSW 2 (REST + WebSocket com protocolo Socket.IO) |
 | E2E e regressão visual | Playwright |
-| Auditoria | Lighthouse CI |
+| Auditoria        | Lighthouse CI |
 
 ## Requisitos
 
@@ -40,19 +40,19 @@ npm run dev:mocks    # http://localhost:5173 com a API simulada
 
 ### Variáveis de ambiente
 
-| Variável | Padrão | Descrição |
-| --- | --- | --- |
-| `VITE_ENABLE_MOCKS` | `true` em `dev:mocks` e `build:demo` | Liga a camada MSW (REST + Socket.IO). |
-| `VITE_API_URL` | `/api` | Base das chamadas REST. |
-| `VITE_SOCKET_URL` | `wss://realtime.kurio.mock` | Endereço do Socket.IO (interceptado pelo MSW). |
-| `VITE_MOCK_SCENARIO` | `default` | Cenário inicial (ver tabela abaixo). |
+|      Variável        |              Padrão                  |         Descrição       |
+|        ---           |                ---                   |            ---          |
+| `VITE_ENABLE_MOCKS`  | `true` em `dev:mocks` e `build:demo` | Liga a camada MSW (REST + Socket.IO). |
+| `VITE_API_URL`       |                `/api`                | Base das chamadas REST. |
+| `VITE_SOCKET_URL`    |      `wss://realtime.kurio.mock`     | Endereço do Socket.IO (interceptado pelo MSW). |
+| `VITE_MOCK_SCENARIO` |              `default`               | Cenário inicial (ver tabela abaixo). |
 
 ## Credenciais fictícias
 
-| Usuário | E-mail | Senha |
-| --- | --- | --- |
-| Ana Colecionadora | `ana@kurio.dev` | `Kurio@123` |
-| Bruno Mint | `bruno@kurio.dev` | `Kurio@123` |
+|       Usuário     |      E-mail      |    Senha    |
+|        ---        |       ---        |     ---     |
+| Ana Colecionadora | `ana@kurio.dev`  | `Kurio@123` |
+| Bruno Mint        | `bruno@kurio.dev`| `Kurio@123` |
 
 As senhas são guardadas na API simulada apenas como `SHA-256(salt + ":" + senha)`.
 
@@ -60,19 +60,19 @@ Cupons: `KURIO10` (10%, válido), `LANCAMENTO` (0,05 ETH, válido), `VERAO2024` 
 
 ## Comandos
 
-| Comando | O que faz |
-| --- | --- |
-| `npm run dev:mocks` | Desenvolvimento com mocks |
-| `npm run dev` | Desenvolvimento sem mocks (exige uma API real em `VITE_API_URL`) |
-| `npm run build:demo` | Build otimizado **com** mocks (o mesmo usado no deploy, nos testes e no Lighthouse) |
-| `npm run build` | Build sem mocks |
-| `npm run preview` | Serve o build em `http://localhost:4173` |
-| `npm run typecheck` | Verificação de tipos (`tsc -b`) |
-| `npm run lint` | ESLint |
-| `npm run test:e2e` | Playwright (builda e sobe o preview sozinho) |
+|         Comando          | O que faz |
+|           ---            |    ---    |
+| `npm run dev:mocks`      | Desenvolvimento com mocks |
+| `npm run dev`            | Desenvolvimento sem mocks (exige uma API real em `VITE_API_URL`) |
+| `npm run build:demo`     | Build otimizado **com** mocks (o mesmo usado no deploy, nos testes e no Lighthouse)           |
+| `npm run build`          | Build sem mocks |
+| `npm run preview`        | Serve o build em `http://localhost:4173` |
+| `npm run typecheck`      | Verificação de tipos (`tsc -b`) |
+| `npm run lint`           | ESLint |
+| `npm run test:e2e`       | Playwright (builda e sobe o preview sozinho) |
 | `npm run test:e2e:update` | Gera/atualiza as baselines de regressão visual |
 | `npm run test:e2e:report` | Abre o relatório HTML (`reports/playwright`) |
-| `npm run lighthouse` | Build demo + 3 execuções por página/perfil + mediana em `reports/lighthouse/summary.md` |
+| `npm run lighthouse`     | Build demo + 3 execuções por página/perfil + mediana em `reports/lighthouse/summary.md` |
 
 ## Cenários da API simulada
 
@@ -84,29 +84,29 @@ Selecione de três formas:
 
 **Reset completo:** botão "Resetar dados" no painel, ou `window.__kurio.reset()` no console e recarregue. Restaura o seed (catálogo, usuários, carrinhos, carteiras, pedidos e flags de cenário).
 
-| Cenário | Efeito |
-| --- | --- |
-| `default` | Tudo funciona, latência 120–380 ms (semente fixa) |
-| `fast` | Sem latência (usado pelos testes) |
-| `slow` | Todas as respostas levam 2,5 s (skeletons) |
-| `variable` | Latência 50 ms–2 s (semente fixa) |
+|    Cenário     | Efeito |
+|      ---       |   ---  |
+| `default`      | Tudo funciona, latência 120–380 ms (semente fixa) |
+| `fast`         | Sem latência (usado pelos testes) |
+| `slow`         | Todas as respostas levam 2,5 s (skeletons) |
+| `variable`     | Latência 50 ms–2 s (semente fixa) |
 | `out-of-order` | Consultas do catálogo alternam 1,5 s / 100 ms (resposta antiga chega depois) |
-| `offline` | Erro de rede em toda chamada e socket recusado |
+| `offline`      | Erro de rede em toda chamada e socket recusado |
 | `server-error` | `GET /api/nfts` responde 500 |
-| `flaky` | 1ª consulta do catálogo/detalhe responde 503; o retry automático recupera |
-| `empty` | Catálogo vazio |
-| `favorites-fail` | Favoritar/desfavoritar responde 500 (rollback otimista) |
+| `flaky`        | 1ª consulta do catálogo/detalhe responde 503; o retry automático recupera |
+| `empty`        | Catálogo vazio |
+| `favorites-fail`   | Favoritar/desfavoritar responde 500 (rollback otimista) |
 | `payment-rejected` | Pedidos são recusados pela "rede" após ~2,5 s |
-| `order-timeout` | A 1ª resposta de criação de pedido demora 15 s (cliente desiste em 8 s); o retry com a mesma chave recupera o mesmo pedido |
+| `order-timeout`    | A 1ª resposta de criação de pedido demora 15 s (cliente desiste em 8 s); o retry com a mesma chave recupera o mesmo pedido |
 | `price-change-at-checkout` | Na 1ª confirmação o preço sobe e a API responde 409 `QUOTE_OUTDATED` |
 | `sold-out-at-checkout` | Na 1ª confirmação a edição esgota (409 `OUT_OF_STOCK`) |
-| `wallet-rejected` | A conexão de carteira é recusada |
-| `short-session` | Sessões expiram 60 s após o login |
-
+| `wallet-rejected`      | A conexão de carteira é recusada |
+| `short-session`        | Sessões expiram 60 s após o login |
+ 
 ## Como reproduzir os fluxos de falha
 
-| Fluxo | Passos |
-| --- | --- |
+|              Fluxo              |                        Passos                           |
+|               ---               |                          ---                            |
 | Preço muda com item no carrinho | Adicione um NFT ao carrinho → painel → **Alterar preço**. O aviso aparece e o resumo é recalculado pela API. |
 | Checkout com cotação desatualizada | No pagamento, conecte a carteira e abra a revisão → painel → **Alterar preço**. O botão "Confirmar e pagar" é bloqueado até você **Aceitar novos valores**. |
 | Preço/esgotamento na confirmação | Cenário `price-change-at-checkout` ou `sold-out-at-checkout` → confirme a compra. |
