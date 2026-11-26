@@ -11,11 +11,15 @@ import { cn } from '@/lib/utils'
  * O botão central (ícone de leitura de QR) leva às Carteiras: é onde se
  * conecta uma carteira, ação que no Web3 normalmente começa lendo um QR code.
  */
+
 export function MobileNav() {
   const pathname = useRouterState({ select: (s) => s.location.pathname })
   const { user } = useAuth()
   const { data: cart } = useCart()
   const count = cart?.itemCount ?? 0
+
+  // Detalhe do NFT (frame mobile do Figma): a barra de compra ocupa o rodapé no lugar da navegação.
+  if (pathname.startsWith('/nft/')) return null
 
   const item = (active: boolean) =>
     cn(

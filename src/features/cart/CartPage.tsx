@@ -213,22 +213,22 @@ function CartCard({ item }: { item: CartItem }) {
   const { busy, setQuantity, remove } = useItemActions(item)
   const note = availabilityNote(item)
   return (
-    <li className={cn('flex gap-3 rounded-xl bg-surface p-2', busy && 'opacity-60')} data-testid="cart-item-mobile">
-      <img src={item.nft.image} alt="" width={64} height={64} className="size-16 rounded-lg object-cover" />
-      <div className="flex flex-1 flex-col justify-between">
+    <li className={cn('flex gap-3 rounded-xl bg-surface p-3', busy && 'opacity-60')} data-testid="cart-item-mobile">
+      <img src={item.nft.image} alt="" width={88} height={88} className="size-[88px] shrink-0 rounded-lg object-cover" />
+      <div className="flex min-w-0 flex-1 flex-col justify-between">
         <div className="flex justify-between gap-2">
-          <div>
-            <p className="text-xs font-bold">{item.nft.name}</p>
-            <p className="text-[10px] text-muted">Edição: {item.editionLabel}</p>
-            {note && <p className="text-[10px] font-semibold text-danger">{note}</p>}
+          <div className="min-w-0">
+            <p className="truncate text-sm font-bold">{item.nft.name}</p>
+            <p className="text-[11px] text-muted">Edição: {item.editionLabel}</p>
+            {note && <p className="text-[11px] font-semibold text-danger">{note}</p>}
           </div>
           <Button variant="danger" size="icon-sm" onClick={remove} disabled={busy} aria-label={`Remover ${item.nft.name} do carrinho`}>
             <Trash2 aria-hidden />
           </Button>
         </div>
-        <div className="flex items-center justify-between">
-          <p className="text-sm font-bold text-price">{formatEth(item.lineTotal)} ETH</p>
-          <QuantityStepper value={item.quantity} max={Math.max(item.maxQuantity, 1)} onChange={setQuantity} label={item.nft.name} disabled={busy || item.available === 0} size="sm" />
+        <div className="flex items-center justify-between gap-2">
+          <p className="text-base font-bold text-price">{formatEth(item.lineTotal)} ETH</p>
+          <QuantityStepper value={item.quantity} max={Math.max(item.maxQuantity, 1)} onChange={setQuantity} label={item.nft.name} disabled={busy || item.available === 0} />
         </div>
       </div>
     </li>

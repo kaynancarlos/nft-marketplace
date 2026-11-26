@@ -85,7 +85,7 @@ function NftDetailView({ nft }: { nft: NftDetail }) {
   const shareUrl = typeof window !== 'undefined' ? encodeURIComponent(window.location.href) : ''
 
   return (
-    <article className="pb-28 md:pb-0">
+    <article className="pb-40 md:pb-0">
       {/* Mobile: topo com voltar + favoritar */}
       <div className="mt-4 flex items-center justify-between md:hidden">
         <button
@@ -291,25 +291,33 @@ function NftDetailView({ nft }: { nft: NftDetail }) {
       <DetailTabs nft={nft} />
       <NftRail title="Mais desta coleção" items={nft.related} />
 
-      {/* Mobile: barra de compra fixa */}
-      <div className="fixed inset-x-0 bottom-[60px] z-20 border-t border-line bg-surface px-4 py-3 md:hidden">
+      {/* Mobile: barra de compra fixa (substitui a navegação inferior nesta tela, como no Figma). */}
+      <div
+        data-mobile-buybar
+        className="fixed inset-x-0 bottom-0 z-30 rounded-t-3xl border-t border-line bg-surface px-4 pb-[calc(1rem+env(safe-area-inset-bottom))] pt-4 shadow-[0_-8px_24px_rgba(0,0,0,0.45)] md:hidden"
+      >
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2 text-xs">
+          <div className="flex items-center gap-3 text-sm">
             <span>Qtd.</span>
-            <QuantityStepper value={quantity} max={maxQuantity} onChange={setQuantity} label={nft.name} disabled={unavailable} size="sm" />
+            <QuantityStepper value={quantity} max={maxQuantity} onChange={setQuantity} label={nft.name} disabled={unavailable} />
           </div>
-          <p className="text-base font-bold text-price" aria-live="polite">
+          <p className="text-xl font-bold text-price" aria-live="polite">
             {formatEth(total)} ETH
           </p>
         </div>
-        <div className="mt-2 flex gap-2">
-          <Button onClick={() => add(true)} loading={addToCart.isPending} disabled={unavailable} className="h-11 flex-1 rounded-full">
+        <div className="mt-3 flex gap-3">
+          <Button
+            onClick={() => add(true)}
+            loading={addToCart.isPending}
+            disabled={unavailable}
+            className="h-14 flex-1 rounded-full text-base font-bold shadow-lg shadow-primary/20"
+          >
             {unavailable ? 'Esgotado' : 'Comprar NFT'}
           </Button>
           <Button
             variant="secondary"
             size="icon"
-            className="size-11 rounded-full"
+            className="size-14 rounded-full [&_svg]:size-5"
             onClick={() => add(false)}
             disabled={unavailable || addToCart.isPending}
             aria-label={`Adicionar ${nft.name} ao carrinho`}

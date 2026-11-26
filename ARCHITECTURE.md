@@ -163,7 +163,7 @@ Limitações:
 - **Carteiras:** o formulário usa só os campos que a API de carteiras precisa (nome, rede, tipo, endereço, ENS). Os campos do frame que repetem dados do perfil ficam na tela de perfil.
 - **Estados não desenhados** (pendente, recusado, 404, vazio, erro, explorador simulado, "em breve") seguem a mesma linguagem visual.
 - **Links fora do escopo** (Criadores, Aprenda, Diário, Ajuda, redes sociais, newsletter, login social, recuperar senha) levam a "Em breve" ou mostram aviso de indisponibilidade. Nada aparenta sucesso.
-- **Painel "Cenários":** ferramenta da demonstração (botão no canto inferior esquerdo no desktop e aba lateral no mobile). Ele altera apenas o servidor simulado.
+- **Painel "Cenários":** ferramenta da demonstração, fora do Figma (botão no canto inferior esquerdo no desktop; no mobile, aba lateral que pode ser arrastada para cima ou para baixo para não cobrir o conteúdo, com a posição salva no navegador). Ele altera apenas o servidor simulado.
 
 ## 9. Performance
 

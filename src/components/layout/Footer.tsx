@@ -85,7 +85,7 @@ function FooterItem({ link }: { link: FooterLink }) {
 export function Footer() {
   const [email, setEmail] = useState('')
   return (
-    <footer className="mx-auto mt-16 w-full max-w-[1264px] px-4 pb-24 md:px-8 md:pb-6">
+    <footer className="mx-auto mt-16 w-full max-w-[1264px] px-4 pb-24 md:px-8 md:pb-6 [body:has([data-mobile-buybar])_&]:pb-44 md:[body:has([data-mobile-buybar])_&]:pb-6">
       <div className="rounded-t-[var(--radius-card)] bg-surface">
         <div className="grid gap-8 px-6 py-8 md:grid-cols-4 md:gap-0">
           {FEATURES.map((f) => (

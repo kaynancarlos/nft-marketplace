@@ -78,7 +78,7 @@ Cupons: `KURIO10` (10%, válido), `LANCAMENTO` (0,05 ETH, válido), `VERAO2024` 
 
 Selecione de três formas:
 
-1. **Painel "Cenários"** (botão flutuante no canto inferior esquerdo da demonstração).
+1. **Painel "Cenários"**: no desktop, botão flutuante no canto inferior esquerdo; no celular, aba na lateral esquerda (arraste para cima ou para baixo para mudar a posição).
 2. **URL:** `?scenario=<id>` em qualquer página (fica salvo e some da barra de endereço).
 3. **Console:** `window.__kurio.setScenario('<id>')` e recarregue.
 
